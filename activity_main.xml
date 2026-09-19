@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蓝牙 GPS 联动控制"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 蓝牙状态 -->
+    <TextView
+        android:id="@+id/tvBluetoothState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="蓝牙状态：检测中…"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="#E3F2FD"
+        android:layout_marginBottom="12dp" />
+
+    <!-- GPS 状态 -->
+    <TextView
+        android:id="@+id/tvGpsState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GPS 状态：检测中…"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="#E8F5E9"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 倒计时状态 -->
+    <TextView
+        android:id="@+id/tvCountdownState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="倒计时：无"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:background="#FFF3E0"
+        android:layout_marginBottom="24dp" />
+
+    <!-- 等待时间设置 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="断开后等待时间（秒）："
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etDelaySeconds"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="30"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="刷新状态" />
+
+</LinearLayout>
